@@ -24,7 +24,7 @@ import httplib
 import logging
 from xml.dom import minidom
 
-HEALTHGRAPH_API_BASE = 'https://api.runkeeper.com/'
+HEALTHGRAPH_API_BASE = 'https://api.runkeeper.com'
 HEALTHGRAPH_AUTH_URL = 'https://runkeeper.com/apps/authorize'
 HEALTHGRAPG_TOKEN_URL = 'https://runkeeper.com/apps/token'
 
@@ -130,4 +130,4 @@ class HealthGraphClient(object):
   
   def get_user(self, user_id):
     media_type = 'application/vnd.com.runkeeper.User+json'
-    return self._make_request('user', media_type = media_type)
+    return self._make_request('/user', media_type = media_type)
